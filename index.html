@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <title>RPG game project</title> 
+    </head>
+    <body>
+        <header id="game-logo"> <!-- game title -->
+                <h1>test <img class="game-img" src="https://cdn3.iconfinder.com/data/icons/role-playing-game-5/340/rpg_ranger_knife_hunter_bow_archer_fantasy-512.png" alt="placeholder-logo" width="70" height="70" /> test</h1>
+            </header>
+        <main class="container"> 
+            <div id="main-game-body"> <!-- game area start -->
+                <section class="player-area" id="player"> <!-- left section -->
+                    <div class="health-bar" id="player-health-bar">
+                    </div>
+                    <div class="character-img" id="player-img">
+                        <img class="archer" src="https://i.imgur.com/sHfO2Qp.png" alt="archer-img" height="150" width="150" />
+                    </div>
+                    <div class="stats-box" id="player-stats-box">
+                        <p class="player-stats" id="player-hp">HP <span id="p-hp">50</span>/50</p>
+                        <p class="player-stats" id="player-mp">MP <span id="p-mp">10</span>/10</p>
+                        <div class="afflictions" id="player-afflictions">
+                            <div class="affliction" id="psn">
+                                <p id="psn-status">PSN</p>
+                            </div>
+                            <div class="affliction" id="atk">
+                                <p id="atk-status">ATK</p>
+                            </div>
+                            <div class="affliction" id="def">
+                                <p id="def-status">DEF</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-area" id="action-btn-area">
+                        <div class="main-button-area" id="main-btn-area">
+                            <button class="main-action" id="hit-btn">HIT</button>
+                            <button class="main-action" id="eat-btn">EAT</button>
+                            <button class="main-action" id="run-btn">RUN</button>
+                            <button class="main-action" id="bag-btn">BAG</button>
+                        </div>
+                        <div class="spell-button-area" id="spell-btn-area">
+                            <button class="spell-btn" id="spell-1">SPELL 1</button>
+                            <button class="spell-btn" id="spell-2">SPELL 2</button>
+                        </div>
+                    </div>
+                </section>  <!-- left section -->
+                <section class="info-area" id="info"> <!-- middle section -->
+                    <div class="action-img" id="action-img">
+                        <img class="action-archer" src="https://i.imgur.com/HZfZdu0.jpeg" alt="bow-action" height="100" width="100" />
+                    </div>
+                    <div class="log" id="log-area">
+                        <p id="log-text">Player deals 25 damage to hourglass with a bow.</p>
+                    </div>
+                    <input type="text" placeholder="Say Something...">
+                </section>  <!-- middle section -->
+                <section class="opponent-area" id="opponent"> <!-- right section -->
+                    <div class="health-bar" id="opponent-health-bar">
+                    </div>
+                    <div class="opponent-img" id="opponent-img">
+                        <img class="hourglass" src="https://i.imgur.com/gN3Usjk.png" alt="hourglass" height="150" width="150" />
+                    </div>
+                    <div class="stats-box" id="player-stats-box">
+                        <p class="opponent-stats" id="opponent-hp">HP <span id="o-hp">20</span>/20</p>
+                        <p class="opponent-stats" id="opponent-mp">MP <span id="o-mp">5</span>/5</p>
+                        <div class="afflictions" id="opponent-afflictions">
+                            <div class="affliction" id="psn">
+                                <p id="psn-status">PSN</p>
+                            </div>
+                            <div class="affliction" id="atk">
+                                <p id="atk-status">ATK</p>
+                            </div>
+                            <div class="affliction" id="def">
+                                <p id="def-status">DEF</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>  <!-- right section -->
+            </div>  <!-- game area end -->
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
