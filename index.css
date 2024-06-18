@@ -1,0 +1,160 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header[id="game-logo"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    text-align: center;
+}
+
+div[id="main-game-body"] {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+.player-area, .info-area, .opponent-area {
+    border: 1px solid black;
+}
+
+.character-img {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.action-img {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.opponent-img {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+p[id="log-text"] {
+    border: 1px solid black;
+    min-height: 150px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+input[type="text"] {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section[id="player"] {
+    display: flex;
+    flex-direction: column;
+    width: 40%
+}
+
+section[id="info"] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%
+}
+
+section[id="opponent"] {
+    display: flex;
+    flex-direction: column;
+    width: 40%
+}
+
+.player-stats {
+    text-align: center;
+}
+
+.opponent-stats {
+    text-align: center;
+}
+
+.stats-box {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border: 1px solid black;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.afflictions {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+p[id="psn-status"] {
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 3px;
+    background: #AE3AB1;
+    width: 100%;
+    text-align: center;
+}
+
+p[id="atk-status"] {
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 3px;
+    background: #FF3131;
+    width: 100%;
+    text-align: center;
+}
+
+p[id="def-status"] {
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 3px;
+    background: #5394D8;
+    width: 100%;
+    text-align: center;
+}
+
+.button-area {
+    padding-top: 20px;
+}
+
+.main-button-area {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.spell-button-area {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main-action {
+    width: 80px;
+    height: 30px;
+}
+
+.spell-btn {
+    width: 75px;
+    height: 25px;
+}
