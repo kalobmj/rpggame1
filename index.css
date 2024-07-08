@@ -1,12 +1,36 @@
 html, body {
     margin: 0;
     padding: 0;
+    padding-bottom: 20px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: #FC0 1px 0 4px;
+    overflow-y: scroll;
+    overflow: hidden;
+    color: wheat;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/736x/4e/aa/6c/4eaa6c64ead4c058d881be2e1ae7f5f2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    border-radius: 10px;
+    background: linear-gradient(#B6B8A4, #A6A4B8);
+}
+
+/*     background: linear-gradient(#4E44B0, #b940A3) */
+
+.hidden {
+    display: none !important;
 }
 
 header[id="game-logo"] {
@@ -18,6 +42,136 @@ header[id="game-logo"] {
     text-align: center;
 }
 
+h2[class="current-location"] {
+    font-size: 40px;
+}
+
+h2[class="current-monst-text"] {
+    padding-top: 10px;
+}
+
+section[id="start-page"] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+header[id="game-logo-start"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+div[id="style-choose"] {
+    height: 100%;
+    width: 60%;
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    background-image: linear-gradient(to right top, #4e44b0, #7043af, #8c41ad, #a440a8, #b940a3);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+div[id="win-area"] {
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+p[id="king-msg"] {
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+p[id="you-win"] {
+    padding-top: 20px;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+section[id="style-1"], section[id="style-2"] {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+button[class="style"] {
+    margin: auto;
+}
+
+img[class="style-img-1"], img[class="style-img-2"] {
+    padding-bottom: 20px;
+}
+
+.style {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+}
+
+div[id="class-choosing-1"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+div[class="class-choosing-area"] {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    background-image: linear-gradient(to right top, #4e44b0, #7043af, #8c41ad, #a440a8, #b940a3);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+section[class="classes"] {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+img[class="class-img-1"], img[class="class-img-2"], img[class="class-img-3"] {
+    padding-bottom: 20px;
+}
+
+button[class="classes-btn"] {
+    margin: auto;
+}
+
+.classes-btn {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+}
+
 div[id="main-game-body"] {
     display: flex;
     justify-content: space-between;
@@ -25,7 +179,7 @@ div[id="main-game-body"] {
 }
 
 .player-area, .info-area, .opponent-area {
-    border: 1px solid black;
+    border: 1px solid #272727
 }
 
 .character-img {
@@ -54,6 +208,8 @@ p[id="log-text"] {
     margin-right: auto;
     margin-bottom: 10px;
     padding: 5px;
+    text-align: center;
+    max-height: 150px;
 }
 
 input[type="text"] {
@@ -65,20 +221,89 @@ input[type="text"] {
 section[id="player"] {
     display: flex;
     flex-direction: column;
-    width: 40%
+    width: 40%;
+    background-image: linear-gradient(to right top, #4e44b0, #7043af, #8c41ad, #a440a8, #b940a3);
+    border-radius: 1%;
+    padding: 20px;
+    
 }
 
 section[id="info"] {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 40%
+    width: 40%;
+    background-image: linear-gradient(to right top, #4e44b0, #7043af, #8c41ad, #a440a8, #b940a3);
+    border-radius: 1%;
+    padding: 20px;
 }
 
 section[id="opponent"] {
     display: flex;
     flex-direction: column;
-    width: 40%
+    width: 40%;
+    background-image: linear-gradient(to right top, #4e44b0, #7043af, #8c41ad, #a440a8, #b940a3);
+    border-radius: 1%;
+    padding: 20px;
+}
+
+.environment-conditions {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border: 1px solid black;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.bag {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    flex-direction: row;
+}
+
+.bag-header {
+    padding-top: 20px;
+}
+
+h6 {
+    padding-left: 200px;
+    font-size: 20px;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 2px solid black;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+td > button {
+    border-radius: 10px;
+    height: 45px;
+    width: 60px;
+}
+
+.item-img {
+    height: 45px;
+    width: 60px;
+    border-radius: 10px;
+} 
+
+button[class="main-decisions"], button[class="tp-buttons"], button[class="camp"] {
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .player-stats {
@@ -104,7 +329,7 @@ section[id="opponent"] {
     padding-top: 10px;
 }
 
-p[id="psn-status"] {
+p[id="psn-status"], p[id="psn-status-o"] {
     border: 1px solid black;
     border-radius: 10%;
     padding: 3px;
@@ -113,7 +338,7 @@ p[id="psn-status"] {
     text-align: center;
 }
 
-p[id="atk-status"] {
+p[id="atk-status"], p[id="atk-status-o"] {
     border: 1px solid black;
     border-radius: 10%;
     padding: 3px;
@@ -122,7 +347,7 @@ p[id="atk-status"] {
     text-align: center;
 }
 
-p[id="def-status"] {
+p[id="def-status"], p[id="def-status-o"] {
     border: 1px solid black;
     border-radius: 10%;
     padding: 3px;
@@ -140,6 +365,93 @@ p[id="def-status"] {
     justify-content: space-evenly;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.event-button-area {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.gamble-btn {
+    width: 80px;
+    height: 30px;
+}
+
+.shop-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+.shop-btn {
+    width: 31%;
+    height: 40px;
+    white-space: normal;
+}
+
+.hire-btn-area {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+.hire-btns {
+    width: 130px;
+    height: 40px;
+}
+
+.reports-area {
+    border: 1px solid black;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    background-image: url('https://i.pinimg.com/736x/ae/6a/49/ae6a491be784dd68e4e58dc20f9177bd.jpg');
+    height: 150px;
+    width: 200px;
+    background-size: contain;
+    padding-top: 25px;
+}
+
+.main-button-area > div {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+div[id="btn-headers"] {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+
+.start-button-area {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.start-button {
+    font-size: 30px;
+    height: 50px;
+    width: 100px;
 }
 
 .spell-button-area {
