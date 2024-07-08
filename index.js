@@ -1363,7 +1363,7 @@ bagBtn.addEventListener('click', () => {
 // spell btns
 
 spell1Btn.addEventListener('click', () => {
-    if (MP > 20) {
+    if (MP >= 20) {
         if (spell1Ready > 0) {
             castSpell1(playerClass);
             spell1Ready--
@@ -1379,7 +1379,7 @@ spell1Btn.addEventListener('click', () => {
 });
 
 spell2Btn.addEventListener('click', () => {
-    if (MP > 30) {
+    if (MP >= 30) {
         if (spell2Ready > 0) {
             castSpell2(playerClass);
             spell2Ready--
