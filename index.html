@@ -7,77 +7,247 @@
         <title>RPG game project</title> 
     </head>
     <body>
-        <header id="game-logo"> <!-- game title -->
-                <h1>test <img class="game-img" src="https://cdn3.iconfinder.com/data/icons/role-playing-game-5/340/rpg_ranger_knife_hunter_bow_archer_fantasy-512.png" alt="placeholder-logo" width="70" height="70" /> test</h1>
+        <section class="landing-page" id="start-page"> <!-- welcome page -->
+            <header id="game-logo-start"> <!-- game title -->
+                <h1>Time <img class="game-img" src="https://i.pinimg.com/originals/db/ae/70/dbae7013d7b2407d04305cc1138db6c2.jpg" alt="placeholder-logo" width="100" height="100" /> Place</h1>
             </header>
+            <section class="style-choosing" id="style-choosing"> <!-- start style choosing area -->
+            <h2>welcome</h2>
+            <h3>Choose your style</h3>
+            <div class="style-choose" id="style-choose">
+                <section class="styles" id="style-1">
+                    <img class="style-img-1" alt="style-1" width="225" height="275" src="https://static.vecteezy.com/system/resources/thumbnails/036/594/092/small/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" />
+                    <button class="style" id="style-btn-1">1</button>
+                </section>
+                <section class="styles" id="style-2">
+                    <img class="style-img-2" alt="stye-2" width="225" height="275" src="https://i.pinimg.com/originals/1b/2e/31/1b2e314e767a957a44ed8f992c6d9098.jpg" />
+                    <button class="style" id="style-btn-2">2</button>
+                </section>
+            </div>
+            </section> <!-- end style choosing section -->
+            <section class="class-choosing hidden" id="class-choosing">
+                <h3>Choose your class</h3>
+                <div class="class-choosing-1 hidden" id="class-choosing-1"> <!-- 1 classes -->
+                 <div class="class-choosing-area" id="class-choosing-area">
+                    <section class="classes" id="warrior">
+                    <img class="class-img-1" id="warrior-img-1" alt="warrior-img" width="175" height="200" src="https://i.pinimg.com/736x/7d/7c/90/7d7c90ffee593fba2a9d6debfe6b7133.jpg" />
+                    <button class="classes-btn" id="class-btn-1-1">warrior</button>
+                </section>
+                <section class="classes" id="ranger">
+                    <img class="class-img-2" id="ranger-img-1" alt="ranger-img" width="175" height="200" src="https://danaeplays.thenet.sk/content/images/2019/07/96a1283dcc58e074c2e0ef571c3ae35e.jpg" />
+                    <button class="classes-btn" id="class-btn-1-2">ranger</button>
+                </section>
+                <section class="classes" id="mage">
+                    <img class="class-img-3" id="mage-img-1" alt="mage-img" width="175" height="200" src="https://i.pinimg.com/236x/71/21/32/712132e376d353cbd1dcf9f0c98dca26.jpg" />
+                    <button class="classes-btn" id="class-btn-1-3">mage</button>
+                </section>
+                    </div>
+                </div>
+                <div class="class-choosing-2 hidden" id="class-choosing-2"> <!-- 2 classes -->
+                 <div class="class-choosing-area" id="class-choosing-area">
+                    <section class="classes" id="warrior">
+                    <img class="class-img-1" id="warrior-img-2" alt="warrior-img" width="175" height="200" src="https://i.pinimg.com/736x/d4/46/91/d446914e2222cfeb043dc7cef5309acf.jpg" />
+                    <button class="classes-btn" id="class-btn-2-1">warrior</button>
+                </section>
+                <section class="classes" id="ranger">
+                    <img class="class-img-2" id="ranger-img-2" alt="ranger-img" width="175" height="200" src="https://i.pinimg.com/564x/1e/63/ac/1e63ac0c01b87a33ed708a8d73826312.jpg" />
+                    <button class="classes-btn" id="class-btn-2-2">ranger</button>
+                </section>
+                <section class="classes" id="mage">
+                    <img class="class-img-3" id="mage-img-2" alt="mage-img" width="175" height="200" src="https://i.pinimg.com/736x/7d/57/c6/7d57c64165100430518763ca7e2fdd48.jpg" />
+                    <button class="classes-btn" id="class-btn-2-3">mage</button>
+                </section>
+                    </div>
+                </div>
+            </section> <!-- class choosing area -->
+        </section> <!-- landing page end -->
+        <section class="main-game hidden" id="main-game-area"> <!-- main game start -->
+        <header id="game-logo"> <!-- game title --> <!-- main game start -->
+                <h1>Time <img class="game-img" src="https://i.pinimg.com/originals/db/ae/70/dbae7013d7b2407d04305cc1138db6c2.jpg" alt="placeholder-logo" width="70" height="70" /> Place</h1>
+            </header>
+            <h2 class="current-location" id="current-location">introduction</h2>
         <main class="container"> 
             <div id="main-game-body"> <!-- game area start -->
                 <section class="player-area" id="player"> <!-- left section -->
                     <div class="health-bar" id="player-health-bar">
                     </div>
                     <div class="character-img" id="player-img">
-                        <img class="archer" src="https://i.imgur.com/sHfO2Qp.png" alt="archer-img" height="150" width="150" />
+                        <img class="character" id="player-img-1" src="https://i.imgur.com/sHfO2Qp.png" alt="archer-img" height="200" width="200" />
                     </div>
                     <div class="stats-box" id="player-stats-box">
-                        <p class="player-stats" id="player-hp">HP <span id="p-hp">50</span>/50</p>
-                        <p class="player-stats" id="player-mp">MP <span id="p-mp">10</span>/10</p>
+                        <p class="player-stats" id="player-hp">HP <span id="p-hp-curr">50</span>/<span id="p-hp-total">50</span></p>
+                        <p class="player-stats" id="player-mp">MP <span id="p-mp-curr">10</span>/<span id="p-mp-total">10</span></p>
+                        <p class="player-stats" id="player-gold">Gold <span id="p-gold-curr">0</span><span id="p-gold-stored" class="stored-gold hidden"> (<span id="p-gold-stored-curr">100</span> Stored)</span></p>
                         <div class="afflictions" id="player-afflictions">
                             <div class="affliction" id="psn">
-                                <p id="psn-status">PSN</p>
+                                <p class="psn-status hidden" id="psn-status">PSN</p>
                             </div>
                             <div class="affliction" id="atk">
-                                <p id="atk-status">ATK</p>
+                                <p class="atk-status hidden" id="atk-status">ATK</p>
                             </div>
                             <div class="affliction" id="def">
-                                <p id="def-status">DEF</p>
+                                <p class="def-status hidden" id="def-status">DEF</p>
                             </div>
                         </div>
                     </div>
                     <div class="button-area" id="action-btn-area">
                         <div class="main-button-area" id="main-btn-area">
-                            <button class="main-action" id="hit-btn">HIT</button>
+                            <button class="main-action hidden" id="hit-btn">HIT</button>
                             <button class="main-action" id="eat-btn">EAT</button>
-                            <button class="main-action" id="run-btn">RUN</button>
+                            <button class="main-action hidden" id="run-btn">RUN</button>
                             <button class="main-action" id="bag-btn">BAG</button>
                         </div>
                         <div class="spell-button-area" id="spell-btn-area">
-                            <button class="spell-btn" id="spell-1">SPELL 1</button>
-                            <button class="spell-btn" id="spell-2">SPELL 2</button>
+                            <button class="spell-btn hidden" id="spell-1">SPELL 1</button>
+                            <button class="spell-btn hidden" id="spell-2">SPELL 2</button>
                         </div>
                     </div>
                 </section>  <!-- left section -->
                 <section class="info-area" id="info"> <!-- middle section -->
                     <div class="action-img" id="action-img">
-                        <img class="action-archer" src="https://i.imgur.com/HZfZdu0.jpeg" alt="bow-action" height="100" width="100" />
+                        <img class="action-main-img" id="action-main-img" src="https://cdn1.epicgames.com/ue/product/Featured/POLYGONFantasyKingdom_featured-894x488-4cf62d96b394bb9be3c441a903171f4f.png" alt="camp-img" height="175" width="175" />
+                        <img class="action-main-img hidden" id="camp-img" src="https://i.etsystatic.com/18700850/r/il/43b380/4350971744/il_570xN.4350971744_g2af.jpg" alt="camp-img" height="150" width="150" />
+                        <img class="action-main-img hidden" alt="trading-post-img" id="tp-img" src="https://cdn.openart.ai/uploads/image_PlZXhgTz_1694984399778_512.webp" height="150" width="150" />
                     </div>
                     <div class="log" id="log-area">
-                        <p id="log-text">Player deals 25 damage to hourglass with a bow.</p>
+                        <p id="log-text">Welcome to Time Place. A role playing game set in the kingdom of Ashghar. You have been tasked with defeating various monsters and investigating the cause of a mysterious time portal. You can click the start button when ready.</p>
                     </div>
-                    <input type="text" placeholder="Say Something...">
+                    <input class="hidden" type="text" placeholder="Say Something...">
+                    <div class="event-button-area hidden" id="event-btn-area">
+                        <div class="gamble-buttons hidden" id="gamble-btns">
+                            <button class="gamble-btn" id="gamble-5">gamble 5</button>
+                            <button class="gamble-btn" id="gamble-25">gamble 25</button>
+                            <button class="gamble-btn" id="gamble-50">gamble 50</button>
+                        </div>
+                        <div class="shop-buttons hidden" id="shop-btns">
+                            <button class="shop-btn" id="shop-bread" data-value="1" data-worth="10" data-name="bread">bread (10gp)</button>
+                            <button class="shop-btn" id="shop-juice" data-value="2" data-worth="10" data-name="juice">juice (10gp)</button>
+                            <button class="shop-btn" id="shop-meat" data-value="3" data-worth="20" data-name="meat">meat (20gp)</button>
+                            <button class="shop-btn" id="shop-psn" data-value="4" data-worth="30" data-name="poison cure">poison cure (30gp)</button>
+                            <button class="shop-btn" id="shop-health" data-value="5" data-worth="30" data-name="health potion">health potion (30gp)</button>
+                            <button class="shop-btn" id="shop-mana" data-value="6" data-worth="30" data-name="mana potion">mana potion (30gp)</button>
+                            <button class="shop-btn" id="shop-atk" data-value="7" data-worth="50" data-name="atk up">atk up (50gp)</button>
+                            <button class="shop-btn" id="shop-spell1" data-value="8" data-worth="50" data-name="the Maverik Text">spell 1 replenish (50gp)</button>
+                            <button class="shop-btn" id="shop-spell2" data-value="9" data-worth="70" data-name="the Dovelynn Text">spell 2 replenish (70gp)</button>
+                        </div>
+                        <div class="hire-buttons hidden" id="hire-btn-area">
+                            <button class="hire-btns" id="scout-1">Scout a random foe (50gp)</button>
+                            <button class="hire-btns" id="scout-2">Scout your next foe (100gp)</button>
+                            <button class="hire-btns hidden" id="show-foe">click to show scout report</button>
+                        </div>
+                        <div class="reports-area hidden" id="report-area">
+                            <p class="foe-hit">foe hit: <span id="scouted-hit">5</span></p>
+                            <p class="foe-health">foe health: <span id="scouted-health">50</span></p>
+                            <p class="foe-poisons">poisons? <span id="scouted-poison">Y</span></p>
+                            <p class="foe-def-debuff">lower defense <span id="scouted-def">Y</span></p>
+                        </div>
+                    </div>
                 </section>  <!-- middle section -->
                 <section class="opponent-area" id="opponent"> <!-- right section -->
                     <div class="health-bar" id="opponent-health-bar">
                     </div>
                     <div class="opponent-img" id="opponent-img">
-                        <img class="hourglass" src="https://i.imgur.com/gN3Usjk.png" alt="hourglass" height="150" width="150" />
+                        <img class="opponent" id="opponent-img-1" src="https://i.etsystatic.com/17561722/r/il/03b989/2897035265/il_570xN.2897035265_m85t.jpg" alt="placeholder-opponent" height="200" width="200" />
                     </div>
-                    <div class="stats-box" id="player-stats-box">
-                        <p class="opponent-stats" id="opponent-hp">HP <span id="o-hp">20</span>/20</p>
-                        <p class="opponent-stats" id="opponent-mp">MP <span id="o-mp">5</span>/5</p>
+                    <div class="environment-conditions" id="curr-envi-conditions">
+                        <p class="envi-time">Time: <span id="curr-time">Night</span></p>
+                        <p class="envi-temp">Temp: <span id="curr-temp"><span id="random-temp">75</span> Degrees</span></p>
+                        <p class="envi-pop-dens">Population Density: <span id="curr-pop">Sparse</span></p>
+                    </div>
+                    <div class="stats-box hidden" id="opponent-stats-box">
+                        <p class="opponent-stats" id="opponent-hp">HP <span id="o-hp-curr">20</span>/<span id="o-hp-total">20</span></p>
+                        <p class="opponent-stats hidden" id="opponent-mp">MP <span id="o-mp-curr">5</span>/<span id="o-mp-total">5</span></p>
                         <div class="afflictions" id="opponent-afflictions">
                             <div class="affliction" id="psn">
-                                <p id="psn-status">PSN</p>
+                                <p class="psn-status-o hidden" id="psn-status-o">PSN</p>
                             </div>
                             <div class="affliction" id="atk">
-                                <p id="atk-status">ATK</p>
+                                <p class="atk-status-o hidden" id="atk-status-o">ATK</p>
                             </div>
                             <div class="affliction" id="def">
-                                <p id="def-status">DEF</p>
+                                <p class="def-status-o hidden" id="def-status-o">DEF</p>
                             </div>
                         </div>
                     </div>
+                    <div class="current-monster" id="curr-monster">
+                        <h2 class="current-monst-text hidden" id="curr-monst-text">time realm</h2>
+                    </div>
+                    <div class="bag-header hidden" id="bag-bag">
+                        <h6>Bag</h6>
+                    </div>
+                    <div class="bag hidden" id="player-bag">
+                        <table style="width: 40%">
+                            <tr>
+                                <td><button class="inv-button" id="inv-btn-1" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                                <td><button class="inv-button" id="inv-btn-2" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                                <td><button class="inv-button" id="inv-btn-3" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="inv-button" id="inv-btn-4" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                                <td><button class="inv-button" id="inv-btn-5" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                                <td><button class="inv-button" id="inv-btn-6" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="inv-button" id="inv-btn-7" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-7" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                                <td><button class="inv-button" id="inv-btn-8" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                                <td><button class="inv-button" id="inv-btn-9" value="0" style="display:inline-block">
+                                    <img class="item-img" style="float:left" id="item-img-9" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1Ki9TkNGca30g1Z_S9E8dVvFgBj7d9DQcLIYhO7fzEm5-61OCba2TsO5R8XsmaOTUtc&usqp=CAU" alt="item" height="100%" width="100%" />
+                                </button></td>
+                            </tr>
+                        </table>
+                    </div>
                 </section>  <!-- right section -->
             </div>  <!-- game area end -->
+            <div class="under-main-game" id="under-game"> <!-- under game area -->
+                <div class="start-button-area" id="start-btn-area">
+                    <button class="start-button" id="start-btn">start</button>
+                </div>
+                <div class="under-btn-headers hidden" id="btn-headers">
+                    <h4>Travels</h4>
+                    <h4>Actions</h4>
+                </div>
+                <div class="main-button-area" id="main-btn-area">
+                <div class="decisions-area hidden" id="decisions">
+                    <button class="main-decisions" id="camp-btn">camp</button>
+                    <button class="main-decisions" id="tp-btn">trading post</button>
+                    <button class="main-decisions" id="travel-btn">travel</button>
+                </div>
+                <div class="decisions-trading-post hidden" id="decisions-tp">
+                    <button class="tp-buttons" id="buy-btn">buy items</button>
+                    <button class="tp-buttons" id="gamble-btn">gamble</button>
+                    <button class="tp-buttons" id="hire-btn">hire foretellers</button>
+                </div>
+                <div class="decisions-camp hidden" id="decisions-camp">
+                    <button class="camp" id="rest-btn">rest</button>
+                    <button class="camp" id="food-btn">take food</button>
+                    <button class="camp" id="store-gold-btn">store gold</button>
+                </div>
+                </div>
+            </div> <!-- under game area end -->
+            </section> <!-- main game area end -->
+            <section class="won-game-area hidden" id="won-game">
+                <div class="win-area" id="win-area">
+                    <img class="won-img" id="win-img" src="https://i.pinimg.com/originals/63/0e/ee/630eee34ce2d5c5aa479bde2598ce27e.png" alt="win-img" height="700" width="1000" />
+                    <p id="king-msg">On behalf of the kingdom of Ashghar. We thank you. The Phantom Hourglass is defeated and the kingdom is saved!</p>
+                    <p id="you-win">YOU WIN!!!</p>
+                </div>
+            </section>
         </main>
         <script src="index.js"></script>
     </body>
