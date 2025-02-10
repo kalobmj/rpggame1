@@ -921,6 +921,7 @@ function resetOpponentStats() {
     opponentDefDown = 0;
     opponentDOT = 0;
     checkOpponentStats();
+    justHired = 0;
 }
 
 // main player btns
