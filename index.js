@@ -198,12 +198,12 @@ playerGoldCurr.innerText = gold;
 
 const monsters = [
 
-    {name: 'small slime', hit: 20, health: 200, poisons: 'No', defDebuff: 'No'},
-    {name: 'unaffiliated rogue', hit: 30, health: 300, poisons: 'Yes', defDebuff: 'Yes'},
-    {name: 'skeleton general', hit: 40, health: 400, poisons: 'Yes', defDebuff: 'No'},
-    {name: 'orge grunt', hit: 50, health: 500, poisons: 'No', defDebuff: 'Yes'},
-    {name: 'red dragon', hit: 70, health: 700, poisons: 'Yes', defDebuff: 'No'},
-    {name: 'Phantom Hourglass', hit: 90, health: 900, poisons: 'Yes', defDebuff: 'No'}
+    { name: 'small slime', hit: 20, health: 200, poisons: 'No', defDebuff: 'No' },
+    { name: 'unaffiliated rogue', hit: 30, health: 300, poisons: 'Yes', defDebuff: 'Yes' },
+    { name: 'skeleton general', hit: 40, health: 400, poisons: 'Yes', defDebuff: 'No' },
+    { name: 'orge grunt', hit: 50, health: 500, poisons: 'No', defDebuff: 'Yes' },
+    { name: 'red dragon', hit: 70, health: 700, poisons: 'Yes', defDebuff: 'No' },
+    { name: 'Phantom Hourglass', hit: 90, health: 900, poisons: 'Yes', defDebuff: 'No' }
 
 ];
 
@@ -213,12 +213,12 @@ let playerNextLocation = 0;
 
 const locations = [
 
-    {name: 'pasture'},
-    {name: 'vacant alley'},
-    {name: 'cemetery'},
-    {name: 'dark cave'},
-    {name: 'lower dungeon'},
-    {name: 'time realm'}
+    { name: 'pasture' },
+    { name: 'vacant alley' },
+    { name: 'cemetery' },
+    { name: 'dark cave' },
+    { name: 'lower dungeon' },
+    { name: 'time realm' }
 
 ];
 
@@ -262,76 +262,76 @@ let spell2ReplenishAmount = 0;
 const bagButtons = document.querySelectorAll("button.inv-button");
 
 function putInBag(value, amount) {
-        if (bagContents.includes(value)) {
-            switch (value) {
-                case 1:
-                    breadAmount += amount
-                    break;
-                case 2:
-                    juiceAmount += amount
-                    break;
-                case 3:
-                    meatAmount += amount
-                    break;
-                case 4:
-                    poisonCureAmount += amount
-                    break;
-                case 5:
-                    healthPotionAmount += amount
-                    break;
-                case 6:
-                    manaPotionAmount += amount
-                    break;
-                case 7:
-                    attackUpAmount += amount
-                    break;
-                case 8:
-                    spell1ReplenishAmount += amount
-                    break;
-                case 9:
-                    spell2ReplenishAmount += amount
-                    break;
-                default:
-                    breadAmount++
-                    break;
-            } // end switch
-        } else {
-            let itemRecieved = 0;
+    if (bagContents.includes(value)) {
+        switch (value) {
+            case 1:
+                breadAmount += amount
+                break;
+            case 2:
+                juiceAmount += amount
+                break;
+            case 3:
+                meatAmount += amount
+                break;
+            case 4:
+                poisonCureAmount += amount
+                break;
+            case 5:
+                healthPotionAmount += amount
+                break;
+            case 6:
+                manaPotionAmount += amount
+                break;
+            case 7:
+                attackUpAmount += amount
+                break;
+            case 8:
+                spell1ReplenishAmount += amount
+                break;
+            case 9:
+                spell2ReplenishAmount += amount
+                break;
+            default:
+                breadAmount++
+                break;
+        } // end switch
+    } else {
+        let itemRecieved = 0;
         for (let i = 0; itemRecieved < 1; i++)
             if (bagContents[i] === 0) {
                 itemRecieved++
-            bagContents[i] = value;
-            switch (value) {
-                case 1:
-                    breadAmount += amount
-                    break;
-                case 2:
-                    juiceAmount += amount
-                    break;
-                case 3:
-                    meatAmount += amount
-                    break;
-                case 4:
-                    poisonCureAmount += amount
-                    break;
-                case 5:
-                    healthPotionAmount += amount
-                    break;
-                case 6:
-                    manaPotionAmount += amount
-                    break;
-                case 7:
-                    attackUpAmount += amount
-                    break;
-                case 8:
-                    spell1ReplenishAmount += amount
-                    break;
-                default:
-                    spell2ReplenishAmount += amount
-                    break;
-            } // end switch
-        } // end if loop
-        } // end for loop
+                bagContents[i] = value;
+                switch (value) {
+                    case 1:
+                        breadAmount += amount
+                        break;
+                    case 2:
+                        juiceAmount += amount
+                        break;
+                    case 3:
+                        meatAmount += amount
+                        break;
+                    case 4:
+                        poisonCureAmount += amount
+                        break;
+                    case 5:
+                        healthPotionAmount += amount
+                        break;
+                    case 6:
+                        manaPotionAmount += amount
+                        break;
+                    case 7:
+                        attackUpAmount += amount
+                        break;
+                    case 8:
+                        spell1ReplenishAmount += amount
+                        break;
+                    default:
+                        spell2ReplenishAmount += amount
+                        break;
+                } // end switch
+            } // end if loop
+    } // end for loop
 } // end func
 
 // [0, 3, 5, 2, 1, 0, 6]
@@ -663,29 +663,29 @@ function checkLocation() {
         travelBtnHeaders.classList.remove('hidden')
         tradingPostButtons.classList.add('hidden')
     } else if (currLocation === 'trading-post') {
-            currentLocationText.innerText = 'Trading Post'
-            travelButtons.classList.remove('hidden')
-            tradingPostButtons.classList.remove('hidden')
-            travelBtnHeaders.classList.remove('hidden')
-            campButtons.classList.add('hidden')
-    } else if (currLocation === 'pasture'){
-            currentLocationText.innerText = 'Pasture'
-            actionImage.src = 'https://i1.sndcdn.com/artworks-XjvA7g8SnwiRXLp4-DFse5g-t500x500.jpg'
+        currentLocationText.innerText = 'Trading Post'
+        travelButtons.classList.remove('hidden')
+        tradingPostButtons.classList.remove('hidden')
+        travelBtnHeaders.classList.remove('hidden')
+        campButtons.classList.add('hidden')
+    } else if (currLocation === 'pasture') {
+        currentLocationText.innerText = 'Pasture'
+        actionImage.src = 'https://i1.sndcdn.com/artworks-XjvA7g8SnwiRXLp4-DFse5g-t500x500.jpg'
     } else if (currLocation === 'vacant alley') {
-            currentLocationText.innerText = 'Vacant Alley'
-            actionImage.src = 'https://wiki.rpg.net/images/5/53/Dark_city.jpg'
+        currentLocationText.innerText = 'Vacant Alley'
+        actionImage.src = 'https://wiki.rpg.net/images/5/53/Dark_city.jpg'
     } else if (currLocation === 'cemetery') {
-            currentLocationText.innerText = 'Cemetery'
-            actionImage.src = 'https://i.pinimg.com/736x/04/d8/42/04d842af1654a36dc0130e424a09ff0a.jpg'
+        currentLocationText.innerText = 'Cemetery'
+        actionImage.src = 'https://i.pinimg.com/736x/04/d8/42/04d842af1654a36dc0130e424a09ff0a.jpg'
     } else if (currLocation === 'dark cave') {
-            currentLocationText.innerText = 'Dark Cave'
-            actionImage.src = 'https://i.pinimg.com/736x/ca/3b/d9/ca3bd9d4dd85a7c7edf810bc53979960.jpg'
+        currentLocationText.innerText = 'Dark Cave'
+        actionImage.src = 'https://i.pinimg.com/736x/ca/3b/d9/ca3bd9d4dd85a7c7edf810bc53979960.jpg'
     } else if (currLocation === 'lower dungeon') {
-            currentLocationText.innerText = 'Lower Dungeon'
-            actionImage.src = 'https://www.shutterstock.com/image-illustration/scary-endless-medieval-catacombs-torches-600nw-1940646100.jpg'
+        currentLocationText.innerText = 'Lower Dungeon'
+        actionImage.src = 'https://www.shutterstock.com/image-illustration/scary-endless-medieval-catacombs-torches-600nw-1940646100.jpg'
     } else if (currLocation === 'time realm') {
-            currentLocationText.innerText = 'Time Realm'
-            actionImage.src = 'https://i.pinimg.com/236x/a3/8e/fb/a38efb2023cc540be46a4bbb459a0dc8.jpg'
+        currentLocationText.innerText = 'Time Realm'
+        actionImage.src = 'https://i.pinimg.com/236x/a3/8e/fb/a38efb2023cc540be46a4bbb459a0dc8.jpg'
     }
 
 } // end checkLocation func
@@ -779,7 +779,7 @@ const checkResting = () => {
 goCampBtn.addEventListener('click', () => {
     if (wonGame === 1) {
         winArea.classList.remove('hidden');
-        mainArea.classList.add('hidden'); 
+        mainArea.classList.add('hidden');
     }
     if (currLocation === 'camp') {
         logText.innerText = 'You tried traveling to camp, but you are already here!'
@@ -873,8 +873,8 @@ goTravelBtn.addEventListener('click', () => {
                 opponentHPText.innerText = opponentHP;
                 opponentHPMax = opponentHP;
                 opponentHPMaxText.innerText = opponentHPMax;
-                opponentMP = 
-                hitBtn.classList.remove('hidden');
+                opponentMP =
+                    hitBtn.classList.remove('hidden');
                 runBtn.classList.remove('hidden');
                 spell1Btn.classList.remove('hidden');
                 spell2Btn.classList.remove('hidden');
@@ -908,7 +908,7 @@ const monsterImgs = (currMonstNum) => {
             break;
         default:
             rightImg.src = ''
-            break;  
+            break;
     } // end switch
 
 }; // end func
@@ -940,22 +940,22 @@ function checkOpponentHP() {
         if (opponentHP <= 0) {
             let randomGoblinChance = Math.floor((Math.random() * 4) + 1)
             if (randomGoblinChance === 1) {
-                    howMuchGold(currentMonster);
-                    getMonsterGold(currentMonster);
-                    gold = (gold / 2);
-                    playerGoldCurr.innerText = gold;
-                    logText.innerText = `You have defeated the ${monsters[currentMonster].name} and recieved ${wonGold} gold! Shortly after a group of random goblins sneak up on you from behind and remove 50% of your gold from your pockets... You should return to camp.`
-                    actionImage.src = 'https://i.pinimg.com/736x/4b/61/c4/4b61c4366cf1385957064f878301197e.jpg'
-                    currentMonster++
-                    playerNextLocation++
-                    opponentHPText.innerText = 0;
-                    hitBtn.classList.add('hidden');
-                    runBtn.classList.add('hidden');
-                    spell1Btn.classList.add('hidden');
-                    spell2Btn.classList.add('hidden');
-                    availableFood = 1;
-                    wellRested++
-                    resetOpponentStats();
+                howMuchGold(currentMonster);
+                getMonsterGold(currentMonster);
+                gold = (gold / 2);
+                playerGoldCurr.innerText = gold;
+                logText.innerText = `You have defeated the ${monsters[currentMonster].name} and recieved ${wonGold} gold! Shortly after a group of random goblins sneak up on you from behind and remove 50% of your gold from your pockets... You should return to camp.`
+                actionImage.src = 'https://i.pinimg.com/736x/4b/61/c4/4b61c4366cf1385957064f878301197e.jpg'
+                currentMonster++
+                playerNextLocation++
+                opponentHPText.innerText = 0;
+                hitBtn.classList.add('hidden');
+                runBtn.classList.add('hidden');
+                spell1Btn.classList.add('hidden');
+                spell2Btn.classList.add('hidden');
+                availableFood = 1;
+                wellRested++
+                resetOpponentStats();
 
             } else {
                 howMuchGold(currentMonster);
@@ -973,7 +973,7 @@ function checkOpponentHP() {
                 wellRested++
                 resetOpponentStats();
             }
-        } 
+        }
     }
 }; // end checkOpponentHP func
 
@@ -1036,9 +1036,9 @@ console.log(opponentMP)
 hitBtn.addEventListener('click', () => {
     let randomOpponentPsnNum = Math.floor((Math.random() * 3) + 1);
     if (randomOpponentPsnNum === 3 && playerPsn === 0) {
-            playerPsn++
-            checkStats();
-    } 
+        playerPsn++
+        checkStats();
+    }
     if (HP > 0) {
         opponentHP -= maxHit;
         opponentHPText.innerText = opponentHP
@@ -1183,8 +1183,8 @@ runBtn.addEventListener('click', () => {
 
     if (failedEscape === 0) {
         if (randomRun === 1) {
-           runBtn.classList.add('hidden');
-           currentlyTraveling = 0;
+            runBtn.classList.add('hidden');
+            currentlyTraveling = 0;
             forceGoBackCamp = 0;
             currentMonsterText.classList.add('hidden');
             logText.innerText = 'You have escaped and arrived back at camp safely...';
@@ -1198,11 +1198,11 @@ runBtn.addEventListener('click', () => {
             resetOpponentStats();
             opponentHP = 0;
 
-    } else {
-        failedEscape = 1
-        logText.innerText = `You tried to escape and failed. You must stay and fight!`
+        } else {
+            failedEscape = 1
+            logText.innerText = `You tried to escape and failed. You must stay and fight!`
+        }
     }
-}
 
 });
 
@@ -1318,7 +1318,7 @@ function checkBtnVal(btnValue) {
                 checkBag();
                 shiftBag();
                 checkBag();
-        }
+            }
             break;
         default:
             HP = HP;
@@ -1355,7 +1355,7 @@ bagBtn.addEventListener('click', () => {
             bagHeader.classList.add('hidden');
             playerBag = 0;
             console.log(bagContents);
-        } 
+        }
     }
     console.log(playerBag)
 });
@@ -1490,7 +1490,7 @@ getFoodBtn.addEventListener('click', () => {
     } else {
         logText.innerText = `You cannot get food as you are currently fighting!`
     }
-}); 
+});
 
 storeGoldBtn.addEventListener('click', () => {
     if (currentlyTraveling === 0) {
@@ -1511,7 +1511,7 @@ storeGoldBtn.addEventListener('click', () => {
                 playerGoldStoredWhole.classList.add('hidden');
                 storeGold = 0;
             }
-        }; 
+        };
     } else {
         logText.innerText = `You cannot store gold while traveling!`
     }
@@ -1587,18 +1587,18 @@ gambleBtn.addEventListener('click', () => {
 gamble5.addEventListener('click', () => {
     let randomRoll = Math.floor(Math.random() * 20)
     if (gold >= 5) {
-            if (randomRoll > 10) {
-                logText.innerText = `You win... Here's 10 gold.`
-                gold += 5;
-                playerGoldCurr.innerText = gold;
-                actionImage.src = 'https://i.pinimg.com/736x/1e/ca/1a/1eca1aded2dedba58f5e5de44bc90c73--the-goblin-gobelin.jpg'
-            };
-            if (randomRoll <= 10) {
-                logText.innerText = `You lose. That's okay you can always try again... hehehe...`
-                gold -= 5;
-                playerGoldCurr.innerText = gold;
-                actionImage.src = 'https://i.pinimg.com/1200x/af/64/70/af647037cc1a3d61379c60b1b03b23dd.jpg'
-            };
+        if (randomRoll > 10) {
+            logText.innerText = `You win... Here's 10 gold.`
+            gold += 5;
+            playerGoldCurr.innerText = gold;
+            actionImage.src = 'https://i.pinimg.com/736x/1e/ca/1a/1eca1aded2dedba58f5e5de44bc90c73--the-goblin-gobelin.jpg'
+        };
+        if (randomRoll <= 10) {
+            logText.innerText = `You lose. That's okay you can always try again... hehehe...`
+            gold -= 5;
+            playerGoldCurr.innerText = gold;
+            actionImage.src = 'https://i.pinimg.com/1200x/af/64/70/af647037cc1a3d61379c60b1b03b23dd.jpg'
+        };
     } else {
         logText.innerText = `You don't have enough gold to wager that much. Maybe you shouldn't be worrying about gambling right now hehehe...`
     }
@@ -1607,18 +1607,18 @@ gamble5.addEventListener('click', () => {
 gamble25.addEventListener('click', () => {
     let randomRoll = Math.floor(Math.random() * 20)
     if (gold >= 25) {
-            if (randomRoll > 10) {
-                logText.innerText = `You win... Here's 50 gold.`
-                gold += 25;
-                playerGoldCurr.innerText = gold;
-                actionImage.src = 'https://i.pinimg.com/736x/1e/ca/1a/1eca1aded2dedba58f5e5de44bc90c73--the-goblin-gobelin.jpg'
-            };
-            if (randomRoll <= 10) {
-                logText.innerText = `You lose. That's okay you can always try again... hehehe...`
-                gold -= 25;
-                playerGoldCurr.innerText = gold;
-                actionImage.src = 'https://i.pinimg.com/1200x/af/64/70/af647037cc1a3d61379c60b1b03b23dd.jpg'
-            };
+        if (randomRoll > 10) {
+            logText.innerText = `You win... Here's 50 gold.`
+            gold += 25;
+            playerGoldCurr.innerText = gold;
+            actionImage.src = 'https://i.pinimg.com/736x/1e/ca/1a/1eca1aded2dedba58f5e5de44bc90c73--the-goblin-gobelin.jpg'
+        };
+        if (randomRoll <= 10) {
+            logText.innerText = `You lose. That's okay you can always try again... hehehe...`
+            gold -= 25;
+            playerGoldCurr.innerText = gold;
+            actionImage.src = 'https://i.pinimg.com/1200x/af/64/70/af647037cc1a3d61379c60b1b03b23dd.jpg'
+        };
     } else {
         logText.innerText = `You don't have enough gold to wager that much. Maybe try wagering less...`
     }
@@ -1627,18 +1627,18 @@ gamble25.addEventListener('click', () => {
 gamble50.addEventListener('click', () => {
     let randomRoll = Math.floor(Math.random() * 20)
     if (gold >= 50) {
-            if (randomRoll > 10) {
-                logText.innerText = `You win... Here's 100 gold.`
-                gold += 50;
-                playerGoldCurr.innerText = gold;
-                actionImage.src = 'https://i.pinimg.com/736x/1e/ca/1a/1eca1aded2dedba58f5e5de44bc90c73--the-goblin-gobelin.jpg'
-            };
-            if (randomRoll <= 10) {
-                logText.innerText = `You lose. That's okay you can always try again... hehehe...`
-                gold -= 50;
-                playerGoldCurr.innerText = gold;
-                actionImage.src = 'https://i.pinimg.com/1200x/af/64/70/af647037cc1a3d61379c60b1b03b23dd.jpg'
-            };
+        if (randomRoll > 10) {
+            logText.innerText = `You win... Here's 100 gold.`
+            gold += 50;
+            playerGoldCurr.innerText = gold;
+            actionImage.src = 'https://i.pinimg.com/736x/1e/ca/1a/1eca1aded2dedba58f5e5de44bc90c73--the-goblin-gobelin.jpg'
+        };
+        if (randomRoll <= 10) {
+            logText.innerText = `You lose. That's okay you can always try again... hehehe...`
+            gold -= 50;
+            playerGoldCurr.innerText = gold;
+            actionImage.src = 'https://i.pinimg.com/1200x/af/64/70/af647037cc1a3d61379c60b1b03b23dd.jpg'
+        };
     } else {
         logText.innerText = `You don't have enough gold to wager that much. Maybe try wagering less...`
         actionImage.src = 'https://i.pinimg.com/1200x/af/64/70/af647037cc1a3d61379c60b1b03b23dd.jpg';
@@ -1685,24 +1685,32 @@ scout1.addEventListener('click', () => {
             logText.innerText = `You don't have enough to hire my scouts... Are we a joke to you?`
         }
     } else {
+        scoutReport.classList.add('hidden');
         logText.innerText = `My scouts have already provided you with a report. Come back later and I might have a new report for you.`
     }
 });
 
 scout2.addEventListener('click', () => {
-    if (gold >= 100) {
-        logText.innerText = `Elewynn takes your payment and stealths into the shadows for a few brief moments, only to return with a small scroll in hand. "Hey I have the report from the scouts. You can view it below." `
-        scout1.classList.add('hidden');
-        scout2.classList.add('hidden');
-        showReport.classList.remove('hidden');
-        foeHit.innerText = monsters[currentMonster].hit
-        foeHealth.innerText = monsters[currentMonster].health
-        foePsn.innerText = monsters[currentMonster].poisons
-        foeDefDebuff.innerText = monsters[currentMonster].defDebuff
-        gold -= 100;
-        playerGoldCurr.innerText = gold;
+    if (justHired === 0) {
+        if (gold >= 100) {
+            logText.innerText = `Elewynn takes your payment and stealths into the shadows for a few brief moments, only to return with a small scroll in hand. "Hey I have the report from the scouts. You can view it below." `
+            scout1.classList.add('hidden');
+            scout2.classList.add('hidden');
+            scoutReport.classList.add('hidden');
+            showReport.classList.remove('hidden');
+            foeHit.innerText = monsters[currentMonster].hit
+            foeHealth.innerText = monsters[currentMonster].health
+            foePsn.innerText = monsters[currentMonster].poisons
+            foeDefDebuff.innerText = monsters[currentMonster].defDebuff
+            gold -= 100;
+            playerGoldCurr.innerText = gold;
+            justHired++
+        } else {
+            logText.innerText = `You don't have enough to hire my scouts... Are we a joke to you?`
+        }
     } else {
-        logText.innerText = `You don't have enough to hire my scouts... Are we a joke to you?`
+        scoutReport.classList.add('hidden');
+        logText.innerText = `My scouts have already provided you with a report. Come back later and I might have a new report for you.`
     }
 });
 
@@ -1713,6 +1721,8 @@ showReport.addEventListener('click', () => {
 
     showReport.classList.add('hidden');
     scoutReport.classList.remove('hidden');
+    scout1.classList.remove('hidden');
+    scout2.classList.remove('hidden');
 
 });
 
@@ -1734,7 +1744,7 @@ function hideScroll() {
 // make text log into list
 // make text go into list
 // query all selector to remove list contents
-// switch to move text in list up one. when hits last one defaults to just removes it 
+// switch to move text in list up one. when hits last one defaults to just removes it
 // have like 10 lists
 // scroll bar on text box
 
